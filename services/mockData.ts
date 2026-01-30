@@ -220,8 +220,16 @@ export const INITIAL_MARKETING: MarketingAsset[] = [
 
 export const INITIAL_PATCH_NOTES: PatchNote[] = [
     {
-        version: "1.1.1",
+        version: "1.1.2",
         date: new Date().toISOString().split('T')[0],
+        changes: [
+            "Hotfix: Correção crítica de dependências (React 18 + Dexie Hooks) resolvendo erro de carregamento.",
+            "Estabilidade: Padronização das versões do React e React DOM."
+        ]
+    },
+    {
+        version: "1.1.1",
+        date: "2023-10-29",
         changes: [
             "Correção de tipagem no módulo de banco de dados (Dexie).",
             "Melhoria na estabilidade da inicialização do banco de dados."
@@ -229,7 +237,7 @@ export const INITIAL_PATCH_NOTES: PatchNote[] = [
     },
     {
         version: "1.1.0",
-        date: new Date().toISOString().split('T')[0],
+        date: "2023-10-29",
         changes: [
             "Arquitetura de Dados: Implementação de banco de dados assíncrono (IndexedDB).",
             "Performance: Suporte para grande volume de dados locais via Dexie.js.",
