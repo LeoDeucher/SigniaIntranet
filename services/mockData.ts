@@ -220,8 +220,25 @@ export const INITIAL_MARKETING: MarketingAsset[] = [
 
 export const INITIAL_PATCH_NOTES: PatchNote[] = [
     {
-        version: "1.1.3",
+        version: "1.1.5",
         date: new Date().toISOString().split('T')[0],
+        changes: [
+            "Hotfix: Correção de erros de tipagem com a biblioteca D3.js no Organograma.",
+            "Estabilidade: Garantia de renderização do organograma mesmo com definições de tipo ausentes."
+        ]
+    },
+    {
+        version: "1.1.4",
+        date: new Date().toISOString().split('T')[0],
+        changes: [
+            "Critical Hotfix: Resolvido erro de 'Tela Branca' removendo a dependência estrita de indexação no carregamento.",
+            "Database: Ordenação de notas de atualização migrada para memória para garantir estabilidade.",
+            "Database: Atualização para Schema v3 para corrigir índices em background."
+        ]
+    },
+    {
+        version: "1.1.3",
+        date: "2023-10-31",
         changes: [
             "Hotfix: Atualização da estrutura do banco de dados (Indexação de Data).",
             "Correção: Erro de SchemaError 'KeyPath date on object store patchNotes is not indexed' resolvido."
