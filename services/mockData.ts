@@ -220,8 +220,16 @@ export const INITIAL_MARKETING: MarketingAsset[] = [
 
 export const INITIAL_PATCH_NOTES: PatchNote[] = [
     {
-        version: "1.1.2",
+        version: "1.1.3",
         date: new Date().toISOString().split('T')[0],
+        changes: [
+            "Hotfix: Atualização da estrutura do banco de dados (Indexação de Data).",
+            "Correção: Erro de SchemaError 'KeyPath date on object store patchNotes is not indexed' resolvido."
+        ]
+    },
+    {
+        version: "1.1.2",
+        date: "2023-10-30",
         changes: [
             "Hotfix: Correção crítica de dependências (React 18 + Dexie Hooks) resolvendo erro de carregamento.",
             "Estabilidade: Padronização das versões do React e React DOM."

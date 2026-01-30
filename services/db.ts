@@ -34,6 +34,11 @@ class SigniaDatabase extends Dexie {
             marketingAssets: 'id, type',
             patchNotes: 'version' // Using version as primary key
         });
+
+        // Version 2: Add date index to patchNotes to fix SchemaError when ordering by date
+        (this as any).version(2).stores({
+            patchNotes: 'version, date'
+        });
     }
 }
 
